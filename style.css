@@ -13,6 +13,11 @@ body {
     color: #333;
     font-size: 16px;
 }
+.profile-photo {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
 
 
 .container {
@@ -59,10 +64,24 @@ body {
 }
 
 .publication-item {
-    margin-bottom: 1.5rem;  
-    padding: 1.2rem 0;     
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem 0;
 }
 
+.publication-image {
+    width: 120px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.publication-info {
+    flex: 1;
+}
 .publication-item:last-child {
     border-bottom: none;
 }
