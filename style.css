@@ -27,7 +27,7 @@ body {
 
 .container {
     display: flex;
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 2rem 1rem;
     gap: 50px;
@@ -115,6 +115,29 @@ body {
     margin-top: 0.8rem;
 }
 
+/* List styling */
+ul {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+li {
+    padding-left: 2rem;  /* Add 2rem indent to all list items */
+    margin-bottom: 0.5rem;
+    list-style-position: inside;
+}
+
+/* Specific styling for contact list */
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    padding-left: 1rem;  /* Less indent for contact items */
+    margin-bottom: 0.8rem;
+}
+
+/* Research list styling */
 .research-list {
     list-style: none;
     column-count: 2;
@@ -163,4 +186,25 @@ a:hover {
     .publication-item {
         padding: 1rem 0;
     }
+}
+
+/* Research Interests - Two Column Layout */
+/* Target the research interests section specifically */
+.main-content .section:nth-child(2) ul {
+    column-count: 2;
+    column-gap: 2rem;
+    column-fill: balance;
+}
+
+/* Alternative - if the above doesn't work, we can add a class to the HTML */
+.research-interests-list {
+    column-count: 2;
+    column-gap: 2rem;
+    column-fill: balance;
+}
+
+/* Make sure list items don't break across columns */
+.main-content .section:nth-child(2) ul li {
+    break-inside: avoid;
+    margin-bottom: 0.5rem;
 }
